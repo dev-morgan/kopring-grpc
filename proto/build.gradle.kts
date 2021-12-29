@@ -17,9 +17,9 @@ plugins {
 }
 
 dependencies {
-    implementation("io.grpc:grpc-netty-shaded:1.43.0")
-    implementation("io.grpc:grpc-protobuf:1.42.1")
-    implementation("io.grpc:grpc-stub:1.43.0")
+    implementation("io.grpc:grpc-netty-shaded:1.43.1")
+    implementation("io.grpc:grpc-protobuf:1.43.1")
+    implementation("io.grpc:grpc-stub:1.43.1")
 
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
 
