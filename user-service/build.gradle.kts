@@ -7,8 +7,9 @@ plugins {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation(project(":proto"))
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("net.devh:grpc-server-spring-boot-starter:2.13.0.RELEASE")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
