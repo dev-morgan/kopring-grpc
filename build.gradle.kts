@@ -20,7 +20,12 @@ allprojects {
 
     tasks.withType<KotlinCompile> {
         kotlinOptions {
-            freeCompilerArgs = listOf("-Xjsr305=strict")
+            /**
+             * -X options
+             * jsr305=strict :: to have null-safety taken in account in Kotlin types inferred from libraries APIs
+             * opt-in=kotlin.RequiresOptIn :: experimental features enabled by default
+             */
+            freeCompilerArgs = listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn")
             jvmTarget = JavaVersion.VERSION_11.toString()
         }
     }
