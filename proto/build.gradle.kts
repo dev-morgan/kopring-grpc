@@ -16,10 +16,11 @@ plugins {
     id("com.google.protobuf") version "0.8.18"
 }
 
+var grpcVersion = "1.43.1"
 dependencies {
-    implementation("io.grpc:grpc-netty-shaded:1.43.1")
-    implementation("io.grpc:grpc-protobuf:1.43.1")
-    implementation("io.grpc:grpc-stub:1.43.1")
+    implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
+    implementation("io.grpc:grpc-protobuf:$grpcVersion")
+    implementation("io.grpc:grpc-stub:$grpcVersion")
 
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
 
@@ -28,11 +29,11 @@ dependencies {
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:3.19.1"
+        artifact = "com.google.protobuf:protoc:3.19.1" // Protobuf Compiler (protoc) is a compiler for .proto files.
     }
     plugins {
         id("grpc") {
-            artifact = "io.grpc:protoc-gen-grpc-java:1.42.1"
+            artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion" // The protoc plugin for gRPC Java
         }
     }
     generateProtoTasks {
