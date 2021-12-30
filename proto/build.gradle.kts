@@ -29,7 +29,7 @@ dependencies {
 
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
 
-    testImplementation("io.kotest:kotest-runner-junit5:5.0.2")
+    testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
 }
 
 protobuf {
