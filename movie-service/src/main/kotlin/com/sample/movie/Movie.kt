@@ -2,8 +2,10 @@ package com.sample.movie
 
 import javax.persistence.Entity
 import javax.persistence.Id
+import javax.persistence.Table
 
 @Entity
+@Table(name = "movies")
 class Movie(
     @Id
     var id: String? = null,

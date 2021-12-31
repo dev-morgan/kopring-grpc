@@ -16,11 +16,7 @@ class UserService(val userRepository: UserRepository) : UserServiceGrpc.UserServ
         val builder = UserResponse.newBuilder()
         userRepository.findById(request.loginId)
             .ifPresent { user ->
-                builder.apply {
-                    name = user.name
-                    loginId = user.login
-                    genre = Genre.valueOf(user.genre!!.uppercase())
-                }
+                updateUser(builder, user)
             }
         responseObserver.onNext(builder.build())
         responseObserver.onCompleted()
@@ -32,13 +28,17 @@ class UserService(val userRepository: UserRepository) : UserServiceGrpc.UserServ
         userRepository.findById(request.loginId)
             .ifPresent { user ->
                 user.genre = request.genre.toString()
-                builder.apply {
-                    name = user.name
-                    loginId = user.login
-                    genre = Genre.valueOf(user.genre!!.uppercase())
-                }
+                updateUser(builder, user)
             }
         responseObserver.onNext(builder.build())
         responseObserver.onCompleted()
+    }
+
+    private fun updateUser(builder: UserResponse.Builder, user: User) {
+        builder.apply {
+            name = user.name
+            loginId = user.login
+            genre = Genre.valueOf(user.genre!!.uppercase())
+        }
     }
 }

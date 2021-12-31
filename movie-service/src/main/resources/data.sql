@@ -1,2 +1,2 @@
-DROP TABLE IF EXISTS movie;
-CREATE TABLE movie AS SELECT * FROM CSVREAD('classpath:movie.csv', NULL, 'charset=UTF-8');
+DROP TABLE IF EXISTS movies;
+CREATE TABLE movies AS SELECT * FROM CSVREAD('classpath:movies.csv', NULL, 'charset=UTF-8');

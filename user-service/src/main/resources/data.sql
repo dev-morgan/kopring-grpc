@@ -1,2 +1,2 @@
-DROP TABLE IF EXISTS user;
-CREATE TABLE user AS SELECT * FROM CSVREAD('classpath:user.csv', NULL, 'charset=UTF-8');
+DROP TABLE IF EXISTS users;
+CREATE TABLE users AS SELECT * FROM CSVREAD('classpath:users.csv', NULL, 'charset=UTF-8');
