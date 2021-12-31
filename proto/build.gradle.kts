@@ -16,16 +16,17 @@ plugins {
     id("com.google.protobuf") version "0.8.18"
 }
 
-val grpcVersion = "1.43.1"
+val protobufVersion = "3.17.1"
+val grpcVersion = "1.42.1"
 val grpcKotlinVersion = "1.2.0"
-val protobufKotlinVersion = "3.19.1"
 
 dependencies {
-    implementation("com.google.protobuf:protobuf-kotlin:$protobufKotlinVersion")
     implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
     implementation("io.grpc:grpc-protobuf:$grpcVersion")
     implementation("io.grpc:grpc-stub:$grpcVersion")
     implementation("io.grpc:grpc-kotlin-stub:$grpcKotlinVersion")
+    implementation("com.google.protobuf:protobuf-java-util:$protobufVersion")
+    implementation("com.google.protobuf:protobuf-kotlin:$protobufVersion")
 
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
 
@@ -34,7 +35,7 @@ dependencies {
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:$protobufKotlinVersion" // compiler for .proto files.
+        artifact = "com.google.protobuf:protoc:$protobufVersion" // compiler for .proto files.
     }
     plugins {
         id("grpc") {
@@ -45,13 +46,10 @@ protobuf {
         }
     }
     generateProtoTasks {
-        ofSourceSet("main").forEach { task ->
-            task.plugins {
+        all().forEach {
+            it.plugins {
                 id("grpc")
                 id("grpckt")
-            }
-            task.builtins {
-                id("kotlin")
             }
         }
     }
