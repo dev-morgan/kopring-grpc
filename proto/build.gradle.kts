@@ -17,7 +17,7 @@ plugins {
 }
 
 val protobufVersion = "3.17.1"
-val grpcVersion = "1.42.1"
+val grpcVersion = "1.43.1"
 val grpcKotlinVersion = "1.2.0"
 
 dependencies {
