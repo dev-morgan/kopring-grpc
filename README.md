@@ -23,9 +23,6 @@ play kotlin,springboot with grpc
     }
   ]
 }
-
-
-# aggregator sample
-./kopring-grpc/aggregator-service/src/main/resources/aggregator-requests.http
-
 ```
+### aggregator test sample
+[aggregator-requests.http](./kopring-grpc/aggregator-service/src/main/resources/aggregator-requests.http)
