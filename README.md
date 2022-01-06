@@ -2,11 +2,19 @@
 
 play kotlin,springboot with grpc
 
+![grpc](https://user-images.githubusercontent.com/85666242/148385053-d7507707-3fbe-4a1c-8919-ce2518a35ca9.png)
+
+
 ### generate proto file
 
 ```
 ➜ ./gradlew clean :proto:generateProto
 ```
+
+### aggregator test sample
+
+- [aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
+
 
 ### grpc test
 
@@ -32,10 +40,6 @@ play kotlin,springboot with grpc
   ]
 }
 ```
-
-### aggregator test sample
-
-- [aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
 
 ### Reference
 
