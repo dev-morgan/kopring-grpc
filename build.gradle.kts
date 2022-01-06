@@ -49,7 +49,5 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
         implementation("io.github.microutils:kotlin-logging:2.1.21")
         implementation("ch.qos.logback:logback-classic:1.2.10")
-
-        runtimeOnly("com.h2database:h2")
     }
 }
