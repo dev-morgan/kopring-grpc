@@ -1,6 +1,11 @@
 # kopring-grpc
 play kotlin,springboot with grpc
 
+### generate proto file
+```
+➜ ./gradlew clean :proto:generateProto
+```
+
 ### grpc test
 ```
 # user-service
