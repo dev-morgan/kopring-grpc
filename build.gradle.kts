@@ -26,7 +26,7 @@ allprojects {
              * opt-in=kotlin.RequiresOptIn :: experimental features enabled by default
              */
             freeCompilerArgs = listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn")
-            jvmTarget = JavaVersion.VERSION_11.toString()
+            jvmTarget = JavaVersion.VERSION_11.majorVersion
         }
     }
 }

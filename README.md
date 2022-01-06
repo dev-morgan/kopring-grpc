@@ -1,12 +1,15 @@
 # kopring-grpc
+
 play kotlin,springboot with grpc
 
 ### generate proto file
+
 ```
 ➜ ./gradlew clean :proto:generateProto
 ```
 
 ### grpc test
+
 ```
 # user-service
 ➜ grpcurl --plaintext localhost:6565 list
@@ -29,8 +32,11 @@ play kotlin,springboot with grpc
   ]
 }
 ```
+
 ### aggregator test sample
-[aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
+
+- [aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
 
 ### Reference
+
 - https://vins-udemy.s3.amazonaws.com/grpc-java/slides/gRPC-slides.pdf
