@@ -31,3 +31,6 @@ play kotlin,springboot with grpc
 ```
 ### aggregator test sample
 [aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
+
+### Reference
+- https://vins-udemy.s3.amazonaws.com/grpc-java/slides/gRPC-slides.pdf
