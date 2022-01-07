@@ -13,7 +13,7 @@ play kotlin,springboot with grpc
 
 ### aggregator test sample
 
-- [aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
+- [aggregator-requests.http](./aggregator/src/main/resources/aggregator-requests.http)
 
 ### grpc test
 
