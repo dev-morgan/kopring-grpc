@@ -41,12 +41,6 @@ play kotlin,springboot with grpc
 }
 ```
 
-### generate proto file
-
-```
-➜ ./gradlew clean :proto:generateProto
-```
-
 ### Reference
 
 - https://vins-udemy.s3.amazonaws.com/grpc-java/slides/gRPC-slides.pdf
