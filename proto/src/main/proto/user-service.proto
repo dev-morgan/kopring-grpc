@@ -9,8 +9,8 @@ message UserSearchRequest {
 }
 
 message UserResponse {
-  string login_id = 1;
-  string name = 2;
+  string username = 1;
+  string nick = 2;
   common.Genre genre = 3;
 }
 

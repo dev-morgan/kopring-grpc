@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional
 @GrpcService
 class UserService(val userRepository: UserRepository) : UserServiceGrpc.UserServiceImplBase() {
 
+    @Transactional(readOnly = true)
     override fun getUserGenre(request: UserSearchRequest, responseObserver: StreamObserver<UserResponse>) {
         val builder = UserResponse.newBuilder()
         userRepository.findById(request.loginId)
@@ -36,8 +37,8 @@ class UserService(val userRepository: UserRepository) : UserServiceGrpc.UserServ
 
     private fun updateUser(builder: UserResponse.Builder, user: User) {
         builder.apply {
-            name = user.name
-            loginId = user.login
+            username = user.username
+            nick = user.nick
             genre = Genre.valueOf(user.genre!!.uppercase())
         }
     }

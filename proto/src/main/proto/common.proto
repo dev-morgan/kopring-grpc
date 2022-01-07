@@ -9,5 +9,5 @@ enum Genre {
   DRAMA = 0;
   ACTION = 1;
   CRIME = 2;
-  WESTERN = 3;
+  SF = 3;
 }

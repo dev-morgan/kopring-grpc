@@ -8,9 +8,9 @@ import javax.persistence.Table
 @Table(name = "movies")
 class Movie(
     @Id
-    var id: String? = null,
+    var id: Long? = null,
     var title: String? = null,
-    val year: Int? = null,
+    val release: Int? = null,
     val rating: Double? = null,
     val genre: String? = null
 )
