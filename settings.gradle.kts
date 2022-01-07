@@ -1,2 +1,2 @@
 rootProject.name = "kopring-grpc"
-include("proto", "aggregator-service", "user-service", "movie-service")
+include("proto", "aggregator", "user-service", "movie-service")

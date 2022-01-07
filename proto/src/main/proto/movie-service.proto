@@ -6,7 +6,7 @@ option java_package = "com.sample.models";
 
 message MovieDto {
   string title = 1;
-  int32 year = 2;
+  int32 release = 2;
   double rating = 3;
 }
 

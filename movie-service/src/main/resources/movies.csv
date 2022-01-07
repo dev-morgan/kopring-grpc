@@ -1,4 +1,5 @@
-id, title, year, rating, genre
-1,City of god, 2002, 8.06, CRIME
-2,Oldboy, 2003, 8.4, ACTION
-3,Inception, 2010, 8.8. ACTION
+id,title,release,rating,genre
+1,City of god,2002,8.06,CRIME
+2,Oldboy,2003,9.99,ACTION
+3,Inception,2010,8.88,CRIME
+4,The Matrix Resurrections,2021,9.3,SF

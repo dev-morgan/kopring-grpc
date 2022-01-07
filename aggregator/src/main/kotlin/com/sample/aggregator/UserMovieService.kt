@@ -24,7 +24,7 @@ class UserMovieService {
         val movieSearchResponse = movieStub.getMovies(movieSearchRequest)
 
         return movieSearchResponse.movieList.map { movieDto ->
-                RecommendMovie(movieDto.title, movieDto.year, movieDto.rating)
+                RecommendMovie(movieDto.title, movieDto.release, movieDto.rating)
             }.toList()
     }
 
