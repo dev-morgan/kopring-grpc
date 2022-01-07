@@ -15,7 +15,8 @@ class MovieService(
 
     @Transactional(readOnly = true)
     override fun getMovies(request: MovieSearchRequest, responseObserver: StreamObserver<MovieSearchResponse>) {
-        val movies = movieRepository.findByGenreOrderByReleaseDesc(request.genre.toString()).map { movie ->
+        val movies = movieRepository.findByGenreOrderByReleaseDesc(request.genre.toString())
+            .map { movie ->
                 MovieDto.newBuilder().apply {
                     title = movie.title
                     release = movie.release!!

@@ -6,8 +6,9 @@ option java_multiple_files = true;
 option java_package = "com.sample.models.common";
 
 enum Genre {
-  DRAMA = 0;
-  ACTION = 1;
-  CRIME = 2;
-  SF = 3;
+  UNKNOWN = 0;
+  DRAMA = 1;
+  ACTION = 2;
+  CRIME = 3;
+  SF = 4;
 }

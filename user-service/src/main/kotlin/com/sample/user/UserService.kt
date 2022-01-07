@@ -4,7 +4,6 @@ import com.sample.models.UserGenreUpdateRequest
 import com.sample.models.UserResponse
 import com.sample.models.UserSearchRequest
 import com.sample.models.UserServiceGrpc
-import com.sample.models.common.Genre
 import io.grpc.stub.StreamObserver
 import net.devh.boot.grpc.server.service.GrpcService
 import org.springframework.transaction.annotation.Transactional
@@ -17,7 +16,11 @@ class UserService(val userRepository: UserRepository) : UserServiceGrpc.UserServ
         val builder = UserResponse.newBuilder()
         userRepository.findById(request.loginId)
             .ifPresent { user ->
-                updateUser(builder, user)
+                builder.apply {
+                    username = user.username
+                    nick = user.nick
+                    genre = user.getGenre()
+                }
             }
         responseObserver.onNext(builder.build())
         responseObserver.onCompleted()
@@ -29,17 +32,13 @@ class UserService(val userRepository: UserRepository) : UserServiceGrpc.UserServ
         userRepository.findById(request.loginId)
             .ifPresent { user ->
                 user.genre = request.genre.toString()
-                updateUser(builder, user)
+                builder.apply {
+                    username = user.username
+                    nick = user.nick
+                    genre = user.getGenre()
+                }
             }
         responseObserver.onNext(builder.build())
         responseObserver.onCompleted()
-    }
-
-    private fun updateUser(builder: UserResponse.Builder, user: User) {
-        builder.apply {
-            username = user.username
-            nick = user.nick
-            genre = Genre.valueOf(user.genre!!.uppercase())
-        }
     }
 }

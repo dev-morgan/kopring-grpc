@@ -8,7 +8,7 @@ play kotlin,springboot with grpc
 ### generate proto file
 
 ```
-➜ ./gradlew clean :proto:generateProto
+➜ ./gradlew clean :proto:generateProto # or ./gradlew clean assemble
 ```
 
 ### aggregator test sample
