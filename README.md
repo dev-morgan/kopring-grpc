@@ -2,7 +2,8 @@
 
 play kotlin,springboot with grpc
 
-![grpc](https://user-images.githubusercontent.com/85666242/148385053-d7507707-3fbe-4a1c-8919-ce2518a35ca9.png)
+![grpc](https://user-images.githubusercontent.com/85666242/148494484-eacd31bc-0353-4d96-912a-3ed8d658388a.png)
+
 
 ### generate proto file
 
