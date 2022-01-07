@@ -7,12 +7,12 @@ class AggregatorController(
     val userMovieService: UserMovieService
 ) {
 
-    @GetMapping("/user/{loginId}")
+    @GetMapping("/users/{loginId}")
     fun getMovies(@PathVariable loginId: String): List<RecommendMovie> {
         return userMovieService.getUserMovieSuggestions(loginId)
     }
 
-    @PutMapping("/user")
+    @PutMapping("/users")
     fun changeUserGenre(@RequestBody userGenre: UserGenre) {
         userMovieService.changeUserGenre(userGenre)
     }
