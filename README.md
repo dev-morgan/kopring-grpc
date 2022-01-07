@@ -2,26 +2,22 @@
 
 play kotlin,springboot with grpc
 
-### generate proto file
-
-```
-➜ ./gradlew clean :proto:generateProto
-```
-
 ### grpc test
 
 ```
-# user-service
-➜ grpcurl --plaintext localhost:6565 list
-➜ grpcurl --plaintext -d '{"login_id": "morgan"}' localhost:6565 UserService/getUserGenre
+#### user-service
+
+$ grpcurl --plaintext localhost:6565 list
+$ grpcurl --plaintext -d '{"login_id": "morgan"}' localhost:6565 UserService/getUserGenre
 {
   "login_id": "morgan",
   "name": "mkim",
   "genre": "ACTION"
 }
 
-# movie-service
-➜ grpcurl --plaintext -d '{"genre": "ACTION"}' localhost:7575 MovieService/getMovies
+#### movie-service
+$ grpcurl --plaintext localhost:7575 list
+$ grpcurl --plaintext -d '{"genre": "ACTION"}' localhost:7575 MovieService/getMovies
 {
   "movie": [
     {
@@ -33,9 +29,15 @@ play kotlin,springboot with grpc
 }
 ```
 
+### generate proto file
+
+```
+➜ ./gradlew clean :proto:generateProto
+```
+
 ### aggregator test sample
 
-- [aggregator-requests.http](./aggregator-service/src/main/resources/aggregator-requests.http)
+- [aggregator-requests.http](./aggregator/src/main/resources/aggregator-requests.http)
 
 ### Reference
 
