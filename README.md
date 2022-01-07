@@ -23,8 +23,8 @@ play kotlin,springboot with grpc
 ➜ grpcurl --plaintext localhost:6565 list
 ➜ grpcurl --plaintext -d '{"login_id": "morgan"}' localhost:6565 UserService/getUserGenre
 {
-  "login_id": "morgan",
-  "name": "mkim",
+  "username": "morgan",
+  "nick": "mkim",
   "genre": "ACTION"
 }
 
