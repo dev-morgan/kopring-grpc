@@ -16,7 +16,7 @@ plugins {
     id("com.google.protobuf") version "0.8.18"
 }
 
-val grpcVersion = "1.42.2"
+val grpcVersion = "1.44.0"
 val protobufVersion = "3.19.2"
 val grpcKotlinVersion = "1.2.0"
 
