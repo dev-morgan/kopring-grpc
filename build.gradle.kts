@@ -46,7 +46,7 @@ subprojects {
     dependencies {
         implementation(kotlin("stdlib"))
         implementation("io.github.microutils:kotlin-logging:2.1.21")
-        implementation("ch.qos.logback:logback-classic:1.2.10")
+        implementation("ch.qos.logback:logback-classic:1.2.11")
         runtimeOnly("com.h2database:h2:2.1.210")
     }
 }
