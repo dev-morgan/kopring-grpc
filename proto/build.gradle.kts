@@ -18,7 +18,7 @@ plugins {
 
 val grpcVersion = "1.42.2"
 val protobufVersion = "3.19.2"
-val grpcKotlinVersion = "1.2.0"
+val grpcKotlinVersion = "1.3.0"
 
 dependencies {
     implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
